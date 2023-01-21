@@ -1,3 +1,23 @@
 \ProvidesPackage{constitem}
 
-\newcommand{\cuingot}{\includegraphics[valign=c, width=\minecraftitemwidth]{assets/images/copper_ingot.png}}
+\newcommand{\LV}{{\color{blue}{(LV)}}}
+
+\newcommand{\fluidglue}[1][\space]{\minecraftitem[assets/images/fluids/glue.png]{#1}}
+
+\newcommand{\slimeball}[1][\space]{\minecraftitem[assets/images/items/slimeball.png]{#1}}
+\newcommand{\stickyresin}[1][\space]{\minecraftitem[assets/images/items/sticky_resin.png]{#1}}
+\newcommand{\plantball}[1][\space]{\minecraftitem[assets/images/items/plant_ball.png]{#1}}
+\newcommand{\rawrubberpulp}[1][\space]{\minecraftitem[assets/images/items/raw_rubber_pulp.png]{#1}}
+
+\newcommand{\cuingot}[1][\space]{\minecraftitem[assets/images/items/copper_ingot.png]{#1}}
+\newcommand{\cuingottext}{\minecraftitemwithtext[assets/images/items/copper_ingot.png]{铜锭}}
+
+
+\newcommand{\furnace}[1][\space]{
+    \includegraphics[valign=c, width=\minecraftitemwidth]{assets/images/items/furnace.png}
+    熔炼 #1
+}
+\newcommand{\centrifuge}[1][\space]{
+    \includegraphics[valign=c, width=\minecraftitemwidth]{assets/images/items/basic_centrifuge.png}
+    离心 #1
+}

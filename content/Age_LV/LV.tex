@@ -1,4 +1,21 @@
 \begin{center}
+  \begin{tikzpicture}[node distance=10pt]
+      \node[draw, rounded corners]                        (start)   {\slimeball[1]};
+      \node[draw, right=of start]                         (step 1)  {\furnace $\rightarrow$ \stickyresin[1]};
+      \node[draw, align=center, right=of step 1]          (step 2)  {\centrifuge[\LV] \\ 5 EU/t};
+      \node[draw, above=of step 2]                        (byprod 1)  {副产物 \plantball (10\%)};
+      \node[draw, right=30pt of step 2]                   (byprod 2)  {副产物 \fluidglue 100 mB};
+      \node[draw, rounded corners, below=20pt of step 2]  (end)     {\rawrubberpulp};
+      
+      \graph{
+        (start) -> (step 1) -> (step 2) -> (byprod 1);
+        (step 2) -> (byprod 2);
+        {step 2} -> (end);
+      };
+    \end{tikzpicture}
+\end{center}
+
+\begin{center}
     \begin{tikzpicture}[node distance=10pt]
         \node[draw, rounded corners]                        (start)   {\cuingot};
         \node[draw, below=of start]                         (step 1)  {Step 1};

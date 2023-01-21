@@ -6,12 +6,26 @@
 
 \RequirePackage{tikz}
 \RequirePackage{keyval}
+\RequirePackage{overpic}
 
 \usepackage[export]{adjustbox}
 
 % - Items
 
 \newcommand{\minecraftitemwidth}{0.07\linewidth}
+
+\newcommand{\minecraftitem}[2][]{
+  \includegraphics[valign=c, width=\minecraftitemwidth]{#1}
+%  \begin{overpic}[width=\minecraftitemwidth]{#1}
+%    \put(70, 0){{\bf\small #2}}
+%  \end{overpic}
+}
+
+\newcommand{\minecraftitemwithtext}[2][]{
+  \begin{overpic}[width=\minecraftitemwidth]{#1}
+    \put(0, -20){{\bf\small #2}}
+  \end{overpic}
+}
 
 % - Minecraft Crafting Table Recipe Command
 
